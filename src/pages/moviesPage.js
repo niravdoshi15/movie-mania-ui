@@ -21,6 +21,6 @@ export default () => {
     }, [del, selectedGenres, query])
 
     return (
-        <MovieList movies={movies} setQuery={setQuery} query={query} selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres} setMovies={setMovies} setDel={setDel}/>
+        <MovieList movies={movies} directorName={directorName} movieName={movieName} setQuery={setQuery} query={query} selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres} setMovies={setMovies} setDel={setDel}/>
     )
 }

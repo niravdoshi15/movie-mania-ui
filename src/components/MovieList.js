@@ -3,7 +3,7 @@ import DisplayMovie from './DisplayMovie';
 import SearchDropdown from './SearchDropdown';
 import compareValues from '../compareValues'
 
-export default ({ movies, query, selectedGenres, setSelectedGenres, setMovies, setDel, setQuery }) => {
+export default ({ movies, directorName, movieName, query, selectedGenres, setSelectedGenres, setMovies, setDel, setQuery }) => {
 
     const [sortBy, setSortBy] = useState('')
 
@@ -42,7 +42,7 @@ export default ({ movies, query, selectedGenres, setSelectedGenres, setMovies, s
 
     return (
         <div>
-            <SearchDropdown sortBy={sortBy} setQuery={setQuery} query={query} selectedGenres={selectedGenres} onApplyClick={onApplyClick} setSelectedGenres={setSelectedGenres} handleSortChange={handleSortChange} setMovies={setMovies} />
+            <SearchDropdown directorName={directorName} movieName={movieName} sortBy={sortBy} setQuery={setQuery} query={query} selectedGenres={selectedGenres} onApplyClick={onApplyClick} setSelectedGenres={setSelectedGenres} handleSortChange={handleSortChange} setMovies={setMovies} />
             <div className="row col-lg-12">
                 {movies.map((movie, i) =>
                     <DisplayMovie movie={movie} index={i} poster={[posters[i % 5]]} setDel={setDel} />
