@@ -15,7 +15,7 @@ export default ({ movie, index, poster, setDel }) => {
     }
 
     const handleDelete = (id) => {
-        const url = process.env.SERVICE_URL || 'http://localhost:3030'
+        const url = process.env.REACT_APP_SERVICE_URL || 'http://localhost:3030'
         axios.delete(`${url}/api/delete/${id}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`

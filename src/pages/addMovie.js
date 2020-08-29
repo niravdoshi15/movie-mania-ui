@@ -46,7 +46,7 @@ export default () => {
             imdb_score: parseFloat(imdb),
             genre: genre.split(',')
         }
-        const url = process.env.SERVICE_URL || 'http://localhost:3030'
+        const url = process.env.REACT_APP_SERVICE_URL || 'http://localhost:3030'
 
         const headers =  {
             'Accept': 'application/json',

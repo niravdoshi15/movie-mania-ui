@@ -9,7 +9,7 @@ export default () => {
     const [directorName, setDirectorName] = useState([])
     const [del, setDel] = useState(false)
     const [query, setQuery] = useState('')
-    const url = process.env.SERVICE_URL || 'http://localhost:3030'
+    const url = process.env.REACT_APP_SERVICE_URL || 'http://localhost:3030'
     useEffect(() => {
         axios.get(`${url}/api`)
             .then((moviesData) => {

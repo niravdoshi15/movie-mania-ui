@@ -8,7 +8,7 @@ export default ({ selectedGenres, query, setQuery, setSelectedGenres, sortBy, ha
     const [genres, setGenres] = useState([])
 
     useEffect(() => {
-        const url = process.env.SERVICE_URL || 'http://localhost:3030'
+        const url = process.env.REACT_APP_SERVICE_URL || 'http://localhost:3030'
         axios.get(`${url}/api/genres`)
             .then(result => {
                 let genArr = []
@@ -34,7 +34,7 @@ export default ({ selectedGenres, query, setQuery, setSelectedGenres, sortBy, ha
     }
 
     const handleSearch = () => {
-        const url = process.env.SERVICE_URL || 'http://localhost:3030'
+        const url = process.env.REACT_APP_SERVICE_URL || 'http://localhost:3030'
         axios.get(`${url}/api/search?search=${searchBy}&value=${query}`)
             .then((result) => {
                 setMovies(result.data)

@@ -22,7 +22,7 @@ export default () => {
     }
 
     const handleClick = (e) => {
-        const url = process.env.SERVICE_URL || 'http://localhost:3030'
+        const url = process.env.REACT_APP_SERVICE_URL || 'http://localhost:3030'
         const cred = {
             username,
             password
