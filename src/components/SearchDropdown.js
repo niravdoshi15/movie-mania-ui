@@ -110,7 +110,7 @@ export default ({ movieName, directorName, selectedGenres, query, setQuery, setS
                 </div>
             ))} */}
             <button style={{ marginTop: '-6px', height:'55px' }} className='btn btn-info' onClick={handleSearch}>Search</button>
-            <select style={{ width: 'auto', display: 'inline', marginLeft: '40px', height:'55px' }} className="form-control" value={sortBy} onChange={handleSortChange}>
+            <select style={{ width: 'auto', display: 'inline', marginLeft: '65px', height:'55px' }} className="form-control" value={sortBy} onChange={handleSortChange}>
                 <option value=''>--Sort By--</option>
                 <option value='Movies'>Movie</option>
                 <option value='Director'>Director</option>
