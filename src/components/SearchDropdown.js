@@ -97,7 +97,7 @@ export default ({ movieName, directorName, selectedGenres, query, setQuery, setS
 
     return (
         <div style={{ padding: '10px' }} className="form-group">
-            <select style={{ width: 'auto', height:'55px', display: 'inline' }} className="form-control" value={searchBy} onChange={handleSerachChange}>
+            <select style={{ width: 'auto', height: '55px', display: 'inline' }} className="form-control" value={searchBy} onChange={handleSerachChange}>
                 <option value='Movie'>Movie</option>
                 <option value='Director'>Director</option>
             </select>
@@ -109,14 +109,14 @@ export default ({ movieName, directorName, selectedGenres, query, setQuery, setS
                     </ul>
                 </div>
             ))} */}
-            <button style={{ marginTop: '-6px', height:'55px' }} className='btn btn-info' onClick={handleSearch}>Search</button>
-            <select style={{ width: 'auto', display: 'inline', marginLeft: '65px', height:'55px' }} className="form-control" value={sortBy} onChange={handleSortChange}>
+            <button style={{ marginTop: '-6px', height: '55px' }} className='btn btn-info' onClick={handleSearch}>Search</button>
+            <select style={{ width: 'auto', display: 'inline', marginLeft: '65px', height: '55px' }} className="form-control" value={sortBy} onChange={handleSortChange}>
                 <option value=''>--Sort By--</option>
                 <option value='Movies'>Movie</option>
                 <option value='Director'>Director</option>
                 <option value='Popularity'>Popularity</option>
             </select>
-            <div style={{ display:'inline', float:'right', width: '450px', paddingRight: '68px' }}>
+            <div style={{ display: 'inline', float: 'right', width: '450px', paddingRight: '68px' }}>
                 <Select
                     styles={{ display: 'inline' }}
                     options={genres}
@@ -128,10 +128,9 @@ export default ({ movieName, directorName, selectedGenres, query, setQuery, setS
                     isDisabled={disable}
                     placeholder='Filter by Genre'
                 />
-            </div>
-            <button
-                    style={{ display: 'inline', height:'55px', marginTop:'-65px', marginLeft:'30px', float: "right"}}
+                <button style={{float:'right'}}
                     className='btn btn-info' onClick={() => onApplyClick(selectedGenres)}>Apply</button>
+            </div>
         </div>
 
     )
